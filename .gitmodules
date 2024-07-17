@@ -4,6 +4,7 @@
 [submodule "submodules/diff-gaussian-rasterization"]
 	path = submodules/diff-gaussian-rasterization
 	url = https://github.com/craftoine/diff-gaussian-rasterization_transmittance_based
+	branch = fast_culling
 [submodule "SIBR_viewers"]
 	path = SIBR_viewers
 	url = https://github.com/craftoine/sibr_core_transmitance_based
