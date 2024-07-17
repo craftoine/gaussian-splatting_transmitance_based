@@ -1,4 +1,6 @@
 # 3D Gaussian Splatting for Real-Time Radiance Field Rendering
+TO MODIFI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1-
+
 Bernhard Kerbl*, Georgios Kopanas*, Thomas Leimkühler, George Drettakis (* indicates equal contribution)<br>
 | [Webpage](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) | [Full Paper](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_high.pdf) | [Video](https://youtu.be/T_kXY43VZnk) | [Other GRAPHDECO Publications](http://www-sop.inria.fr/reves/publis/gdindex.php) | [FUNGRAPH project page](https://fungraph.inria.fr) |<br>
 | [T&T+DB COLMAP (650MB)](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/datasets/input/tandt_db.zip) | [Pre-trained Models (14 GB)](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/datasets/pretrained/models.zip) | [Viewers for Windows (60MB)](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/binaries/viewers.zip) | [Evaluation Images (7 GB)](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/evaluation/images.zip) |<br>
@@ -47,12 +49,12 @@ User [camenduru](https://github.com/camenduru) was kind enough to provide a Cola
 The repository contains submodules, thus please check it out with 
 ```shell
 # SSH
-git clone git@github.com:graphdeco-inria/gaussian-splatting.git --recursive
+git clone git@github.com:craftoine/gaussian-splatting_transmitance_based.git --recursive
 ```
 or
 ```shell
 # HTTPS
-git clone https://github.com/graphdeco-inria/gaussian-splatting --recursive
+git clone https://github.com/craftoine/gaussian-splatting_transmitance_based--recursive
 ```
 
 ## Overview
@@ -383,6 +385,7 @@ After extracting or installing the viewers, you may run the compiled ```SIBR_gau
 ```shell
 ./<SIBR install dir>/bin/SIBR_gaussianViewer_app -m <path to trained model>
 ```
+You may faced the folowing issue https://github.com/graphdeco-inria/gaussian-splatting/issues/246 if so apply the solution given.
 
 It should suffice to provide the ```-m``` parameter pointing to a trained model directory. Alternatively, you can specify an override location for training input data using ```-s```. To use a specific resolution other than the auto-chosen one, specify ```--rendering-size <width> <height>```. Combine it with ```--force-aspect-ratio``` if you want the exact resolution and don't mind image distortion. 
 
