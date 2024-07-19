@@ -219,7 +219,7 @@ class GaussianModel:
         el = PlyElement.describe(elements, 'vertex')
         PlyData([el]).write(path)
 
-    def reset_opacity(self):
+    def reset_opacity(self,sc = 1.0):
         #firstly delete gaussian with xyz_gradient_accum_ of 0
         prune_mask = (self.xyz_gradient_accum_ == 0).squeeze()
         self.prune_points(prune_mask)
@@ -238,8 +238,8 @@ class GaussianModel:
 
         
         #inncrease the scales before
-        sc = 2
-        if sc !=1:
+        #sc = 2
+        if sc !=1.0:
             scales_new = self.scaling_inverse_activation(self.get_scaling * sc)
             optimizable_tensors = self.replace_tensor_to_optimizer(scales_new, "scaling")
             self._scaling = optimizable_tensors["scaling"]        
